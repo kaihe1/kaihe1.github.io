@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style></style>
+        <script src="p5.min.js"></script>
+  </head>
+  <body>
+    
+    <h1 id="rx"></h1>
+    <h1 id="px"></h1>
+    
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var rx;
+    
+    function setup() {
+      createCanvas(w,h);
+    }
+      //1. check to see it the phone is being moved by
+            //a.dispaly tp the screen the value
+    function draw() {
+      rx = rotationX.toFixed(1);
+      
+      if (rx > prevx) {
+        prevx = rx;
+      }
+      
+      if (prevx 1= rx) {
+        document.body.style.backgroundColor = "red";
+      } else {
+        document.body.style.backgroundColor = "white"
+      }
+      
+      document.getElementById('rx').innerHTML = "x rotation; " + rx;
+      document.getElementById('px').innerHTML = prevx;
+    }
+      //2. do something when it is moved
+      
+      // optional: should there be a default state?
+    </script>
+  </body>
+</html>
